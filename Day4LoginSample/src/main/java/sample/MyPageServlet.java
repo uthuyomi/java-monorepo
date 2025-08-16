@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 /**
  * Servlet implementation class MyPageServlet
  */
-@WebServlet("/MyPageServlet")
+@WebServlet("/mypage")
 public class MyPageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

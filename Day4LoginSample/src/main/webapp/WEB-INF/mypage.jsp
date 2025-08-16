@@ -9,6 +9,6 @@
 </head>
 <body>
 <h2>ようこそ, ${sessionScope.loginUser}さん。</h2>
-<p><a href="${pageContent.request.contextPath}/logout">ログアウト</a></p>
+<p><a href="${pageContext.request.contextPath}/login">ログアウト</a></p>
 </body>
 </html>
