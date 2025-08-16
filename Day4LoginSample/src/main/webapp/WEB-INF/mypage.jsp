@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>ようこそ, ${sessionScope.loginUser}さん。</h2>
+<p><a href="${pageContent.request.contextPath}/logout">ログアウト</a></p>
+</body>
+</html>
