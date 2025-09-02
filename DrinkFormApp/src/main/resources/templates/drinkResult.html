@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>結果ページ</h2>
+	<p th:if="${drink != null}">
+		あなたの好きな飲み物は「<span th:text="${drink}"></span>」ですね！
+	</p>
+	<p th:if="${drink == null}">
+		まだ入力されていません。
+	</p>
+	
+	<a href="/drinkForm">もう一度入力する</a>
+</body>
+</html>

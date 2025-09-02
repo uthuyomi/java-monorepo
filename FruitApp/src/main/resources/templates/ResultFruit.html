@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>結果</h2>
+	<p th:if="${fruit != null}">
+		あなたの好きな果物は<span th:text="${fruit}"></span>ですね！
+	</p>
+	<p th:if="${fruit == null}">
+		まだ入力されていません
+	</p>
+	<a href="/fruitForm"></a>
+</body>
+</html>
