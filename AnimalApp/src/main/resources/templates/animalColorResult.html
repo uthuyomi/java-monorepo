@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>結果ページ</h2>
+	<p th:if="${message != null}" th:text="${message}"></p>
+	<p th:if="${animal != null and color != null}">
+		あなたの好きな動物は「<span th:text="${animal}"></span>」<br>
+		好きな色は「<span th:text="${color}"></span>」ですね！
+	</p>
+	<a href="/animalColorForm">もう一度入力する</a>
+</body>
+</html>
