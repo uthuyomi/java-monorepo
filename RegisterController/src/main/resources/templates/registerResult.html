@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>登録完了</h1>
+	<p th:text="'登録完了:'+${name}+'さん('+ ${email}+')'"></p>
+	<a th:href="@{/registerForm}">戻る</a>
+</body>
+</html>
