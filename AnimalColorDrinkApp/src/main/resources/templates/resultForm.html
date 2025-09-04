@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>実行結果</h2>
+	<p th:if="${ animal == null || color == null || drink == null }" th:text="${message}"></p>
+	<p th:if="${ animal != null && color != null && drink != null}">
+		あなたの好きな動物は「<span th:text="${animal}"></span>」、色は「<span th:text="${color}"></span>」、飲み物は「<span th:text="${drink}"></span>」です。
+	</p>
+</body>
+</html>
