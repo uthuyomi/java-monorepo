@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>お問い合わせ内容を受け付けました。</h2>
+	<p th:if="${ name != null }">名前:<span th:text="${name}"></span></p>
+	<p th:if="${ email != null }">メール:<span th:text="${email}"></span></p>
+	<p th:if="${ message != null }">メッセージ:<span th:text="${message}"></span></p>
+</body>
+</html>
