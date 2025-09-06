@@ -1,11 +1,16 @@
 package com.example.demo;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "users")// ← 予約語を割ける
 public class User {
 	
 	@Id //主キー
-	@GereratedValue(strategy = GenerationType.IDENTITY)// 自動採番
+	@GeneratedValue(strategy = GenerationType.IDENTITY)// 自動採番
 	
 	private Long id;
 	
