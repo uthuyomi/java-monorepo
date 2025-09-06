@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>メモ一覧</title></head>
+<body>
+<h1>メモ一覧</h1>
+
+<a th:href="@{/memos/new}">新規メモ</a>
+
+<ul>
+  <li th:each="memo : ${memos}">
+    <b th:text="${memo.title}"></b> - <span th:text="${memo.content}"></span>
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>新規メモ</title></head>
+<body>
+<h1>新規メモ</h1>
+
+<form th:action="@{/memos/save}" th:object="${memo}" method="post">
+    タイトル: <input type="text" th:field="*{title}"><br>
+    内容: <textarea th:field="*{content}"></textarea><br>
+    <button type="submit">保存</button>
+</form>
+
+</body>
+</html>
