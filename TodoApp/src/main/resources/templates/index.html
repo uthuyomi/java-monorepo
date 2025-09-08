@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo入力</h1>
+    <form th:action="@{/add}" th:object="${todo}" method="post">
+        <input type="text" th:field="*{title}" placeholder="やることを入力"/>
+        <button type="submit">追加</button>
+    </form>
+
+    <h2>Todo一覧</h2>
+    <ul>
+        <li th:each="t : ${todos}" th:text="${t.title}"></li>
+    </ul>
+</body>
+</html>
