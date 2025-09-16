@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="result" th:object="${formDTO}" method="post">
+		名前<input type="text" th:field="*{name}">
+		<br><span th:if="${#fileds.hasErrors('name')}" th:errors="*(name)">
+		メール<input type="text" th:field="*{email}">
+		<br><span th:if="${#fileds.hasErrors('email')}" th:errors="*(email)">
+		<input type="submit" value="送信">
+	</form>
+</body>
+</html>

@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import jakarta.validation.Valid;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,20 +7,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class FormController {
-	@GetMapping("/form")
-	public String showWindow(formDTO dto) {
+public class formController {
+	
+	@GetMapping("form")
+	public String showWindow(formDTO dto) {	
 		return "form";
 	}
 	
-	@PostMapping("/result")
+	@PostMapping("result")
 	public String resultForm(
-			@Valid formDTO dto,
+			formDTO dto,
 			BindingResult bindingResult,
 			Model model
 			) {
 		if(bindingResult.hasErrors()) {
-			//エラーがあればフォームに返す。
 			return "form";
 		}
 		model.addAttribute("name", dto.getName());
