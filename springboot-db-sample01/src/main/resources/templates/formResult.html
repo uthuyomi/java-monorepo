@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>登録結果</title>
+</head>
+<body>
+  <h1>登録完了</h1>
+
+  <p>以下の内容で登録しました。</p>
+
+  <ul>
+    <li>名前: <span th:text="${name}"></span></li>
+    <li>メール: <span th:text="${email}"></span></li>
+  </ul>
+
+  <a th:href="@{/form}">戻る</a>
+</body>
+</html>

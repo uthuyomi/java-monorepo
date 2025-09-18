@@ -6,11 +6,11 @@ import jakarta.validation.constraints.NotBlank;
 public class formDTO {
 	@NotBlank(message = "名前は必須です")
 	private String name;
-	
 	@NotBlank(message = "メールは必須です")
-	@Email(message = "メールの形式が正しくありません")
+	@Email(message = "メールアドレスの形式が正しくありません")
 	private String email;
 	
+	//getter/setter
 	public String getName() {
 		return name;
 	}
