@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>編集</h1>
+	
+	<form th:action="@{/update/{id}(id=${id})}" th:object="${formDTO}" method="post">
+		名前:<input type="text" th:field="*{name}">
+		<span th:if="${ #field.hasErrors('name')}" th:errors="*{name}"></span>
+		メール:<input type="text" th:field="*{email}">
+		<span th:if="${ #field.hasErrors('email')}" th:errors="*{email}"></span>
+		
+		<input type="submit" value="更新">
+	</form>
+	
+	<a th:href="@{/list}">一覧へ戻る</a>
+</body>
+</html>

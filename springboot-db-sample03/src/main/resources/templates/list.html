@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>登録一覧</h1>
+	
+	<table border="1">
+		<tr>
+			<td>ID</td>
+			<td>名前</td>
+			<td>メール</td>
+			<td>操作</td>
+		</tr>
+		<tr th:each="data:${list}">
+			<td th:text="${data.id}"></td>
+			<td th:text="${data.name}"></td>
+			<td td:text="${data.email}"></td>
+			<td>
+				<a href="@{/edit/{id}(id=${data.id})}">編集</a>
+				<a href="@{/delete/{id}(id=${data.id})}">削除</a>
+			</td>
+		</tr>
+	</table>
+	
+	<a th:href="@{/form}">新規登録</a>
+</body>
+</html>
